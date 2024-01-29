@@ -15,7 +15,7 @@ cat "$input_file" | tr -s ' ' '\n' | sort -u > words
 
 #создаём файл со статистикой появления уникальных слов
 stat_file="stat.txt"
-cat "$input_file" | tr -s ' ' '\n' | sort | uniq -c | awk '{print $2":"$1}' > stat_file
+cat "$input_file" | tr -s ' ' '\n' | sort | uniq -c | awk '{print $2":"$1}' > stat
 
 #удаление промежуточных файлов при завершении
 trap 'rm -f "$uniq_words_file" "$stat_file"' EXIT
