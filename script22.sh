@@ -11,7 +11,7 @@ input_file="$1"
 
 #создаём промежуточный файл с уникальными словами
 uniq_words_file="words.txt"
-cat "$input_file" | tr -s ' ' '\n' | sort -u > uniq_words_file
+cat "$input_file" | tr -s ' ' '\n' | sort -u > words
 
 #создаём файл со статистикой появления уникальных слов
 stat_file="stat.txt"
